@@ -1,0 +1,16 @@
+{
+  "name": "proto-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "proto": "tsproto --path proto --output typings"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grpc": "^1.24.5",
+    "nestjs-proto-gen-ts": "^1.0.16",
+    "rxjs": "^6.6.3"
+  }
+}

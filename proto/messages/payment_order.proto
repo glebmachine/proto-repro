@@ -1,0 +1,27 @@
+syntax = 'proto3';
+package payments;
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+// import "google/type/money.proto";
+
+// Тип документа
+enum ExecutionType{
+    // Не задано
+    UNDEFINED = 0;
+    // электронно
+    ELECTRONIC = 1;
+    // срочно
+    URGENT = 2;
+  }
+
+// типы документов
+enum DocumentType {
+    PAYMENT_REQUEST = 0;
+}
+
+
+message PaymentOrder {
+    int64 id = 1;
+    // google.type.Money amount = 2;
+}

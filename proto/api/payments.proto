@@ -1,0 +1,18 @@
+syntax = 'proto3';
+
+package payments;
+
+import "google/protobuf/wrappers.proto";
+import "messages/payment_order.proto";
+
+message PaymentPrintableResponse {
+  google.protobuf.BytesValue content = 1;
+}
+
+message PaymentPrintableRequest {
+  PaymentOrder payment = 1;
+}
+
+service PaymentsExportApi {
+  rpc GetPaymentPrintable(PaymentPrintableRequest) returns (PaymentPrintableResponse) {}
+}
